@@ -2,7 +2,7 @@
 
 {% extends 'base.html' %}
 
-{% block title %}Blog - All Posts{% endblock %}
+{% block title %}Blog - All Posts {% endblock %}
 
 {% block content %}
 <h1>Blog - All Posts</h1>
@@ -10,7 +10,7 @@
     {% if posts %}
     {% for post in posts %}
     <div class="post">
-        <h2><a href="">{{ post.title }}</a></h2>
+        <h2><a href="{% url 'blog_detail' post.id %}">{{ post.title }}</a></h2>
         <p class="date">{{ post.pub_date|date:"F d, Y" }}</p>
         <p class="content">{{ post.content }}</p>
     </div>
