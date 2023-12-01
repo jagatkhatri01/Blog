@@ -1,0 +1,42 @@
+/* custom.css */
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff;
+    /* Primary blue color for navbar */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item a {
+    color: #ffffff;
+    /* White text color for navigation links */
+}
+
+/* Add a margin at the top for the page content */
+.container {
+    margin-top: 20px;
+}
+
+/* Style for post titles */
+.post h2 {
+    color: #007bff;
+    /* Blue color for post titles */
+}
+
+/* Style for post date */
+.post .date {
+    color: #6c757d;
+    /* Gray color for post dates */
+    font-style: italic;
+}
+
+/* Style for post content */
+.post .content {
+    margin-top: 10px;
+    /* Add some space between title/date and content */
+    color: #343a40;
+    /* Dark gray color for content text */
+}
