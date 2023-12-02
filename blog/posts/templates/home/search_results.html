@@ -1,0 +1,31 @@
+<!-- blog/templates/blog/search_results.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Blog - Search Results{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    {% if query %}
+    <p class="lead">Results for '{{ query }}'</p>
+    <div class="search-results">
+        {% if result %}
+        <ul class="list-group">
+            {% for post in result %}
+            <li class="list-group-item">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-muted">No results found.</p>
+        {% endif %}
+    </div>
+    {% else %}
+    <p class="text-danger">No query provided.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

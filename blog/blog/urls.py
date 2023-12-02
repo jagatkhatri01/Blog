@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', post_list, name='post_list'),
     path('post/<int:post_id>/', blog_detail, name='blog_detail'),
+    path('search/', search_query, name='search_query'),
+    path('post_list/', post_list, name='post_list')
 ]
